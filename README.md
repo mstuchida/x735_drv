@@ -18,10 +18,10 @@ $ cd ..
 ##### When using DKMS
 
 ```shell
-$ sudo mkdir -p /usr/src/x735_drv-0.1.1
-$ sudo cp -a ./ /usr/src/x735_drv-0.1.1
-$ sudo dkms add x735_drv -v 0.1.1
-$ sudo dkms install x735_drv/0.1.1
+$ sudo mkdir -p /usr/src/x735_drv-0.1.2
+$ sudo cp -a ./ /usr/src/x735_drv-0.1.2
+$ sudo dkms add x735_drv -v 0.1.2
+$ sudo dkms install x735_drv/0.1.2
 ```
 
 ## Confirm
@@ -52,8 +52,8 @@ $ cd ..
 ##### When using DKMS
 
 ```shell
-$ sudo dkms remove x735_drv/0.1.1 --all
-$ sudo rm -rf /usr/src/x735_drv-0.1.1
+$ sudo dkms remove x735_drv/0.1.2 --all
+$ sudo rm -rf /usr/src/x735_drv-0.1.2
 ```
 
 ## Notes
