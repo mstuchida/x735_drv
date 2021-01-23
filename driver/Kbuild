@@ -1,0 +1,10 @@
+# Kbuild for x735_drv
+
+DEBUG := 0
+
+ifneq ($(DEBUG),0)
+ccflags-y += -DDEBUG -g
+endif
+
+obj-m := x735_drv.o
+x735_drv-y := x735.o 
