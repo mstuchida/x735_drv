@@ -1,0 +1,5 @@
+#!/bin/bash
+rm -fv /usr/local/bin/poweroff.sh
+install -D -v -m 755 ./etc/poweroff.sh /usr/local/bin/poweroff.sh
+echo "x735_drv" >> /etc/modules-load.d/modules.conf 
+

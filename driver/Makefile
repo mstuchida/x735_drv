@@ -28,6 +28,8 @@ install:
 	$(cmd_prefix)install -D -v -m 644 x735_drv.ko $(INSTALL_DIR)/x735_drv.ko
 	$(cmd_prefix)depmod -a $(KVER)
 	$(cmd_prefix)modprobe x735_drv
+	$(cmd_prefix)cp ../etc/poweroff.sh /usr/local/bin/
+	$(cmd_prefix)echo "x735_drv" >> /etc/modules-load.d/modules.conf 
 
 uninstall:
 	$(cmd_prefix)if [ `grep -e '^x735_drv' /proc/modules | wc -l` -ne 0 ]; then \
@@ -35,6 +37,8 @@ uninstall:
 	fi
 	$(cmd_prefix)rm -fv $(INSTALL_DIR)/x735_drv.ko
 	$(cmd_prefix)depmod -a $(KVER)
+	$(cmd_prefix)rm -fv /usr/local/bin/poweroff.sh
+	$(cmd_prefix)sed -i -e "/^x735_drv/d" /etc/modules-load.d/modules.conf 
 
 FORCE:
 

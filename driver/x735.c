@@ -116,7 +116,7 @@ static void __exit gpio_exit(void) {
 module_init(gpio_init);
 module_exit(gpio_exit);
 
-MODULE_VERSION("0.1.0");
+MODULE_VERSION("0.1.1");
 MODULE_AUTHOR("mst.uchida");
 MODULE_DESCRIPTION("unofficial driver for x735");
 MODULE_LICENSE("GPL v2");

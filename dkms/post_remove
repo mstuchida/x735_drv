@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ `find /lib/modules/ -name x735_drv.ko | wc -l` -eq 0 ]; then
+    rm -fv /usr/local/bin/poweroff.sh
+    sed -i -e "/^x735_drv/d" /etc/modules-load.d/modules.conf 
+fi
+

@@ -1,7 +1,8 @@
 # x735_drv
 
-This driver is an experimental Linux driver for the x735 expansion board.
-Only the function to shut down the raspberry pi 4 when a GPIO4 interrupt occurs is implemented.
+This driver is an experimental Linux driver for the x735 expansion board.  
+Only the function to shut down the raspberry pi 4 when a GPIO4 interrupt occurs is implemented.  
+The GPIO4 interrupt is generated when the power switch is pressed.
 
 ## Install
 
@@ -17,17 +18,10 @@ $ cd ..
 ##### When using DKMS
 
 ```shell
-$ sudo mkdir -p /usr/src/x735_drv-0.1.0
-$ sudo cp -a ./ /usr/src/x735_drv-0.1.0
-$ sudo dkms add x735_drv -v 0.1.0
-$ sudo dkms install x735_drv/0.1.0
-```
-
-##### Common
-
-```shell
-$ sudo cp ./etc/poweroff.sh /usr/local/bin/
-$ sudo -u root echo "x735_drv" >> /etc/modules-load.d/modules.conf 
+$ sudo mkdir -p /usr/src/x735_drv-0.1.1
+$ sudo cp -a ./ /usr/src/x735_drv-0.1.1
+$ sudo dkms add x735_drv -v 0.1.1
+$ sudo dkms install x735_drv/0.1.1
 ```
 
 ## Confirm
@@ -45,13 +39,6 @@ If nothing is displayed, execute the following command, and then execute the abo
 $ sudo modprobe x735_drv
 ```
 
-Checking the IRQ
-
-```
-$ cat /proc/interrupts | grep x735
- 50:          0          0          0          0  pinctrl-bcm2835   4 Edge      x735
-```
-
 ## Uninstall
 
 ##### When DKMS is not used
@@ -65,8 +52,8 @@ $ cd ..
 ##### When using DKMS
 
 ```shell
-$ sudo dkms remove x735_drv/0.1.0 --all
-$ sudo rm -rf /usr/src/x735_drv-0.1.0
+$ sudo dkms remove x735_drv/0.1.1 --all
+$ sudo rm -rf /usr/src/x735_drv-0.1.1
 ```
 
 ## Notes
