@@ -60,6 +60,12 @@ $ sudo rm -rf /usr/src/x735_drv-0.1.2
 
 Cannot be used with x730pwr.sh and x730shutdown.sh at the same time.
 
+Development environment
+- Raspberry Pi 4 (8GB)
+- X735 - v2.1
+- X829 - v1.3
+- X829 - C1
+
 ## License
 
 This driver is licensed under GPLv2.
