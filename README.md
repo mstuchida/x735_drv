@@ -6,6 +6,11 @@ The GPIO4 interrupt is generated when the power switch is pressed.
 
 ## Install
 
+gcc, make, kernel source / header must be installed.  
+
+Please refer to the following.  
+https://www.raspberrypi.org/documentation/linux/kernel/headers.md
+
 ##### When DKMS is not used
 
 ```shell
@@ -69,4 +74,5 @@ Development environment
 ## License
 
 This driver is licensed under GPLv2.
+
 
